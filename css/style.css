@@ -1,0 +1,781 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&family=Roboto:ital,wght@1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+  --fullGrid: 1 / 1 / -1 / -1;
+  /* Full grid area variable */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: right;
+}
+
+/* NAV */
+.bg-optional {
+  background-color: #4d2377f7;
+}
+
+.navbar {
+  padding: 1.4rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 3em;
+  color: #f90606 !important;
+  font-weight: 500;
+}
+
+.nav_items {
+  font-size: 1.65em;
+  line-height: 1em;
+}
+
+/* FIN NAV */
+/* VIDEO */
+.main_video {
+  display: grid;
+  grid-template-rows: 100vh;
+  overflow: hidden;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.video-bg {
+  /* Span the full grid */
+  grid-area: var(--fullGrid);
+  /* Re-size video to cover full screen while maintaining aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  /* Display video below overlay */
+  z-index: -1;
+}
+
+.video-bg::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  /* Span the full grid */
+  grid-area: var(--fullGrid);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  /* transparencia */
+  background-color: rgba(122, 198, 236, 0.35);
+}
+
+.video_h1 {
+  font-size: calc(6.8em + 4vw);
+  line-height: 1.5;
+  letter-spacing: 0.25rem;
+  color: #fff;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.83);
+  font-family: "Bebas Neue", cursive;
+}
+
+.video_h2 {
+  font-size: calc(2em + 2vw);
+  color: #171617;
+  text-shadow: 0.05em 0.05em 0.05em #dedde16b;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.row {
+  padding-top: 3rem;
+}
+
+.section2min {
+  display: none;
+}
+
+.section2 {
+  padding: 5em 2em;
+  max-width: 160em;
+  margin-top: 2rem;
+  background-image: linear-gradient(to top, #7087e39e 0%, #792cacb3 100%);
+  height: 30rem;
+}
+
+.section2_h2 {
+  font-size: 5em;
+  text-align: center;
+  padding-top: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.section2_p {
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 2;
+  color: #222;
+  font-family: "Raleway", sans-serif;
+  padding-left: 56px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+/* FIN VIDEO */
+/* card */
+.card-body h5 {
+  font-size: 2rem;
+}
+
+.card-body p {
+  font-size: 2rem;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.section3-card {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* CONTACT FORM */
+input {
+  outline: none;
+  border: none;
+}
+
+input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input:-moz-placeholder {
+  color: #999999;
+}
+
+input::-moz-placeholder {
+  color: #999999;
+}
+
+input:-ms-input-placeholder {
+  color: #999999;
+}
+
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.bg-contact2 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container-contact2 {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(230, 48, 120, 0.8);
+  background: -webkit-linear-gradient(45deg, rgba(213, 0, 125, 0.44), rgba(229, 57, 53, 0.47));
+  background: -o-linear-gradient(45deg, rgba(213, 0, 125, 0.44), rgba(229, 57, 53, 0.47));
+  background: -moz-linear-gradient(45deg, rgba(213, 0, 125, 0.44), rgba(229, 57, 53, 0.47));
+  background: linear-gradient(45deg, rgba(213, 0, 125, 0.44), rgba(229, 57, 53, 0.47));
+}
+
+.wrap-contact2 {
+  width: 790px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 90px 55px;
+}
+
+.contact2-form {
+  width: 100%;
+}
+
+.contact2-form-title {
+  display: block;
+  font-family: Rale;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.wrap-input2 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+
+.input2 {
+  display: block;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+}
+
+.focus-input2 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.focus-input2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #db1563;
+  background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
+  background: -o-linear-gradient(45deg, #d5007d, #e53935);
+  background: -moz-linear-gradient(45deg, #d5007d, #e53935);
+  background: linear-gradient(45deg, #d5007d, #e53935);
+}
+.focus-input2::after {
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: #999999;
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+input.input2 {
+  height: 45px;
+}
+
+input.input2 + .focus-input2::after {
+  top: 16px;
+  left: 0;
+}
+
+.input2:focus + .focus-input2::after {
+  top: -13px;
+}
+
+.input2:focus + .focus-input2::before {
+  width: 100%;
+}
+
+/* button contact */
+.container-contact2-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.wrap-contact2-form-btn {
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  width: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contact2-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #db1563;
+  background: -webkit-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+  background: -o-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+  background: -moz-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+  background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+  top: 0;
+  left: -100%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact2-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 244px;
+  height: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.wrap-contact2-form-btn:hover .contact2-form-bgbtn {
+  left: 0;
+}
+
+/* Responsive  */
+@media (max-width: 576px) {
+  .wrap-contact2 {
+    padding: 72px 15px 90px 15px;
+  }
+}
+/*  Alert validate */
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #0d00c8;
+  border-radius: 2px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0px;
+  pointer-events: none;
+  font-family: "Raleway", sans-serif;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "";
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* whatsapp */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+/* whastapp */
+/* grid texto - imagen */
+.grid {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: auto;
+  grid-template-areas: "article1 imag1" "imag2 article2" "article3 imag3" "imag4 article4";
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  padding-bottom: 3rem;
+}
+
+.article1 {
+  grid-area: article1;
+}
+
+.article2 {
+  grid-area: article2;
+}
+
+.article3 {
+  grid-area: article3;
+}
+
+.article4 {
+  grid-area: article4;
+}
+
+.article1--img {
+  grid-area: imag1;
+}
+
+.article2--img {
+  grid-area: imag2;
+}
+
+.article3--img {
+  grid-area: imag3;
+}
+
+.article4--img {
+  grid-area: imag4;
+}
+
+.grid_art--img1 {
+  width: 32%;
+  padding-top: 2rem;
+}
+
+.grid_art--img {
+  width: 30%;
+}
+
+.grid_img {
+  display: flex;
+  justify-content: center;
+}
+
+/* grid textos alternados */
+.grid_art--h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgba(59, 41, 179, 0.8);
+  font-family: "Raleway" sans-serif;
+  text-align: center;
+  padding-top: 8rem;
+}
+
+.grid_art--p {
+  color: #424491;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 90%;
+  padding-left: 10rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/*fin grid texto - imagen */
+/* grid footer */
+.footer {
+  display: grid;
+  grid-template-columns: 15% 40% 40%;
+  grid-template-rows: auto auto 4rem;
+  grid-template-areas: "logo map redes" "logo map redes" "cr cr cr";
+  padding-top: 5rem;
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo_h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 10rem;
+  color: #f9060694;
+  text-shadow: 0.05em 0.05em 0.05em #2f2351;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.map {
+  grid-area: map;
+  text-align: center;
+}
+
+.map_txt {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.footer_contact {
+  grid-area: redes;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 25rem;
+}
+.footer_contact a:hover {
+  transform: scale(1.25, 1.25);
+  color: #f9060694;
+}
+
+.footer_contact a {
+  text-decoration: none;
+}
+
+.footer_contact--a {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+.redes {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+.redes i:hover {
+  transform: scale(2, 2);
+  color: #f9060694;
+}
+
+.copyright {
+  grid-area: cr;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px) {
+  .bg-optional {
+    background-color: #00ff15;
+  }
+
+  /* .section2min {display: none;} */
+}
+@media screen and (max-width: 768px) {
+  .bg-optional {
+    background-color: #ff0095;
+  }
+
+  /* .section2min {display: none;} */
+}
+@media screen and (max-width: 576px) {
+  .bg-optional {
+    background-color: #d1df12;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+
+  .video_h1 {
+    font-size: calc(4em+2vw);
+    position: relative;
+    bottom: 7rem;
+  }
+
+  .video-bg {
+    width: 1vw;
+  }
+
+  .logo_h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .section2 {
+    display: none;
+  }
+
+  .section2min_h2 {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+  }
+
+  .card-body h5 {
+    font-size: 1.5rem;
+  }
+
+  .card-body p {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .grid_art--h2 {
+    font-size: 1.5rem;
+    padding-top: 5rem;
+  }
+
+  .grid_art--p {
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 0.1rem;
+  }
+
+  .grid_art--img1 {
+    width: 70%;
+  }
+
+  .grid_art--img {
+    width: 12rem;
+    height: 17rem;
+    padding-top: 1.5rem;
+  }
+
+  .logo_h2 {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: left;
+  }
+
+  .footer_contact {
+    height: 5rem;
+  }
+
+  .footer_contact--a {
+    font-size: 1rem;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 70% 10% 10% 5%;
+    grid-template-areas: "logo map ." ". redes ." ". redes ." "cr cr cr";
+    padding-top: 2rem;
+  }
+
+  .map_txt {
+    padding-top: 0rem;
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 3vw;
+  }
+
+  .footer_contact {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10rem;
+  }
+  .footer_contact a:hover {
+    transform: scale(1.25, 1.25);
+    color: #330404cc;
+  }
+
+  .redes i:hover {
+    transform: scale(2, 2);
+    color: #620808b7;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
